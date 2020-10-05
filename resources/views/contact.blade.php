@@ -28,13 +28,10 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-
-
-
 		<!-- header-start -->
 		<header>
 			<!-- header-top-area-start -->
-			<div class="header-top-area header-white">
+			<div class="header-top-area theme-bg">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -77,18 +74,35 @@
 					<div class="row">
 						<div class="col-xl-3 col-lg-3">
 							<div class="logo">
-								<a href="{{url('/')}}"><img src="img/logo/logo-b.png" alt="" /></a>
+								<a href="index.html"><img src="img/logo/logo.png" alt="" /></a>
 							</div>
 						</div>
 						<div class="col-xl-9 col-lg-9">
 							<div class="header-button d-none d-sm-none d-md-none d-lg-block">
-								<a class="btn btn-border" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
+								<a class="btn" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
                            <div class="main-menu text-center">
 								<nav id="mobile-menu">
 									<ul>
 										<li class="active">
-											<a href="{{url('/')}}">home</a>
+											<a href="index.html">home</a>
+											<ul class="submenu">
+												<li>
+													<a href="index.html">Home 01</a>
+												</li>
+												<li>
+													<a href="index-2.html">Home 02</a>
+												</li>
+												<li>
+													<a href="index-3.html">Home 03</a>
+												</li>
+												<li>
+													<a href="index-4.html">Home 04</a>
+												</li>
+												<li>
+													<a href="index-5.html">Home 05</a>
+												</li>
+											</ul>
 										</li>
 										<li>
 											<a href="services-1.html">Services</a>
@@ -186,109 +200,246 @@
 										</li>
 									</ul>
 								</nav>
-						   </div>
-							<div class="mobile-menu"></div>
+                           </div>
                        </div>
 					</div>
+					<div class="col-12"><div class="mobile-menu"></div></div>
 				</div>
 			</div>
 		</header>
 		<!-- header-end -->
-        
-        @yield('content')
-        
-		<!-- footer-start -->
-		<footer>
-			<div class="footer-top-area footer-white gray-bg pt-80">
-				<div class="container">
-					<div class="footer-border pb-45">
-						<div class="row">
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-wrapper mb-30">
-								<div class="footer-logo">
-									<a href="index.html"><img src="img/logo/logo-b.png" alt="" /></a>
-								</div>
-								<div class="footer-text">
-									<p>Nulla gravida orci a odio ullam vsturpis et commodo pharetra, est eros biben duelit nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismoe.</p>
-								</div>
-								<ul class="footer-icon">
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-									<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-									<li><a href="#"><i class="fab fa-skype"></i></a></li>
-								</ul>
-							</div>
+		<!-- breadcrumb-area-start -->
+		<div class="breadcrumb-area pt-245 pb-245 " style="background-image:url(img/bg/bg9.jpg)">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="breadcrumb-text text-center">
+							<h1>Contact us</h1>
 						</div>
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-wrapper mb-30">
-								<h3 class="footer-title">Quick Links</h3>
-								<ul class="footer-menu">
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Condition</a></li>
-									<li><a href="#">Support</a></li>
-									<li><a href="#">Consultation</a></li>
-									<li><a href="#">Team Member</a></li>
-									<li><a href="#">Our Services</a></li>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Who we are</a></li>
-									<li><a href="#">Get a Quote</a></li>
-									<li><a href="#">Recent Post</a></li>
-								</ul>
-							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- breadcrumb-area-start -->
+
+		<!-- contact area start -->
+		<div class="contact-area gray-bg pt-120">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4">
+						<div class="contact-info text-center mb-30">
+							<i class="fas fa-rocket"></i>
+							<h5>location</h5>
+							<span>60 Grant Ave. Central New <br> Road 0708, USA</span>
 						</div>
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-wrapper mb-30">
-								<h3 class="footer-title">Recent Post</h3>
-								<ul class="recent-menu">
-									<li>
-										<div class="recent-text">
-											<h6><a href="blog-details.html">Researchers have finally managed Cut the cord on robotic flies</a></h6>
-										</div>
-										<div class="recent-icon">
-											<i class="fas fa-calendar-alt"></i>
-										</div>
-										<div class="recent-info">
-											<span>05 May 2018</span>
-										</div>
-									</li>
-									<li>
-										<div class="recent-text">
-											<h6>
-												<a href="blog-details.html">Researchers have finally managed Cut the cord on robotic flies</a>
-											</h6>
-										</div>
-										<div class="recent-icon">
-											<i class="fas fa-calendar-alt"></i>
-										</div>
-										<div class="recent-info">
-											<span>05 May 2018</span>
-										</div>
-									</li>
-								</ul>
-							</div>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<div class="contact-info text-center mb-30">
+							<i class="fas fa-headphones"></i>
+							<h5>support</h5>
+							<span>+0123456789 99 <br> support@gmail.com</span>
 						</div>
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-wrapper mb-30">
-								<h3 class="footer-title">Subscribe</h3>
-								<div class="subscribe-text">
-									<p>Enter  your email and get latest updates and offers subscribe us</p>
-								</div>
-								<form id="footer-form" action="#">
-									<input placeholder="Your Email ..." type="text">
-									<button><i class="fas fa-long-arrow-alt-right"></i></button>
-								</form>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<div class="contact-info text-center mb-30">
+							<i class="fas fa-share-alt"></i>
+							<h5>Follow Us</h5>
+							<div class="contact-social">
+								<a href="#">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-twitter"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-google-plus-g"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-pinterest-p"></i>
+								</a>
+								<a href="#">
+									<i class="fab fa-skype"></i>
+								</a>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="contact-bg white-bg mt-60">
+					<div class="section-title section3-title title-contact text-center mb-50">
+						<h1>Have Any Questions ?</h1>
+						<p>Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete
+						account of the system, and expound the actual teachings</p>
+					</div>
+					<form class="contact-form" action="#">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 mb-20">
+								<input type="text" placeholder="Your Name :">
+							</div>
+							<div class="col-lg-6 col-md-6 mb-20">
+								<input type="text" placeholder="Your Email :">
+							</div>
+							<div class="col-lg-12 col-md-12 mb-20">
+								<textarea name="message" cols="30" rows="10" placeholder="Your Question :"></textarea>
+								<div class="text-center mt-20">
+									<button class="btn">send question</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- contact area end -->
+		<!-- map-area-start -->
+		<div class="map-area">
+			<div id="map" class="map"></div>
+		</div>
+		<!-- map-area-end -->
+
+
+		<!-- footer-start -->
+		<footer>
+			<div class="footer-top-area theme-bg pt-80">
+				<div class="container">
+					<div class="footer-border pb-45">
+						<div class="row">
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+								<div class="footer-wrapper mb-30">
+									<div class="footer-logo">
+										<a href="index.htm">
+											<img src="img/logo/footer-logo.png" alt="" />
+										</a>
+									</div>
+									<div class="footer-text">
+										<p>Nulla gravida orci a odio ullam vsturpis et commodo pharetra, est eros biben duelit nec luctus magna felis sollicitudin
+											mauris. Integer in mauris eu nibh euismoe.</p>
+									</div>
+									<ul class="footer-icon">
+										<li>
+											<a href="#">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fab fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fab fa-google-plus-g"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fab fa-pinterest-p"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fab fa-skype"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+								<div class="footer-wrapper mb-30">
+									<h3 class="footer-title">Quick Links</h3>
+									<ul class="footer-menu">
+										<li>
+											<a href="#">Privacy Policy</a>
+										</li>
+										<li>
+											<a href="#">Condition</a>
+										</li>
+										<li>
+											<a href="#">Support</a>
+										</li>
+										<li>
+											<a href="#">Consultation</a>
+										</li>
+										<li>
+											<a href="#">Team Member</a>
+										</li>
+										<li>
+											<a href="#">Our Services</a>
+										</li>
+										<li>
+											<a href="#">About Us</a>
+										</li>
+										<li>
+											<a href="#">Contact Us</a>
+										</li>
+										<li>
+											<a href="#">Who we are</a>
+										</li>
+										<li>
+											<a href="#">Get a Quote</a>
+										</li>
+										<li>
+											<a href="#">Recent Post</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+								<div class="footer-wrapper mb-30">
+									<h3 class="footer-title">Recent Post</h3>
+									<ul class="recent-menu">
+										<li>
+											<div class="recent-text">
+												<h6>
+													<a href="blog-details.html">Researchers have finally managed Cut the cord on robotic flies</a>
+												</h6>
+											</div>
+											<div class="recent-icon">
+												<i class="fas fa-calendar-alt"></i>
+											</div>
+											<div class="recent-info">
+												<span>05 May 2018</span>
+											</div>
+										</li>
+										<li>
+											<div class="recent-text">
+												<h6>
+													<a href="blog-details.html">Researchers have finally managed Cut the cord on robotic flies</a>
+												</h6>
+											</div>
+											<div class="recent-icon">
+												<i class="fas fa-calendar-alt"></i>
+											</div>
+											<div class="recent-info">
+												<span>05 May 2018</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+								<div class="footer-wrapper mb-30">
+									<h3 class="footer-title">Subscribe</h3>
+									<div class="subscribe-text">
+										<p>Enter your email and get latest updates and offers subscribe us</p>
+									</div>
+									<form id="footer-form" action="#">
+										<input placeholder="Your Email ..." type="text">
+										<button>
+											<i class="fas fa-long-arrow-alt-right"></i>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="footer-icon-area pt-40 pb-10">
 						<div class="row">
 							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
 								<div class="footer-icon-wrapper mb-30">
 									<div class="footers-icon">
-										<a href="#"><i class="fas fa-phone"></i></a>
+										<a href="#">
+											<i class="fas fa-phone"></i>
+										</a>
 									</div>
 									<div class="footer-icon-text">
 										<h4>call us</h4>
@@ -299,7 +450,9 @@
 							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
 								<div class="footer-icon-wrapper pl-30 mb-30">
 									<div class="footers-icon">
-										<a href="#"><i class="fas fa-envelope"></i></a>
+										<a href="#">
+											<i class="fas fa-envelope"></i>
+										</a>
 									</div>
 									<div class="footer-icon-text">
 										<h4>Email Us</h4>
@@ -310,7 +463,9 @@
 							<div class="col-xl-4 col-lg-4 col-md-4 d-sm-none d-md-block">
 								<div class="footer-icon-wrapper pl-80 mb-30">
 									<div class="footers-icon">
-										<a href="#"><i class="fas fa-home"></i></a>
+										<a href="#">
+											<i class="fas fa-home"></i>
+										</a>
 									</div>
 									<div class="footer-icon-text">
 										<h4>Location</h4>
@@ -324,7 +479,8 @@
 						<div class="row">
 							<div class="col-xl-12">
 								<div class="copyright text-center">
-									<p>Copyright <i class="far fa-copyright"></i> 2018 BDevs.  All rights reserved</p>
+									<p>Copyright
+										<i class="far fa-copyright"></i> 2018 BDevs. All rights reserved</p>
 								</div>
 							</div>
 						</div>
@@ -333,6 +489,7 @@
 			</div>
 		</footer>
 		<!-- footer-end -->
+
 
 
 		<!-- JS here -->
@@ -352,7 +509,8 @@
         <script src="js/wow.min.js"></script>
         <script src="js/jquery.scrollUp.min.js"></script>
         <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ97zN_MClQ8BnmJJOCY165S2QEYvbIis"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>
