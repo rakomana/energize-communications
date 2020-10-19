@@ -75,6 +75,14 @@ a:focus,
 	text-decoration: none;
 	outline: none;
 }
+
+/*Map Styling*/
+#map-canvas{
+    border: groove 3px #ccc;
+    height: 400px;
+    width: 100%;
+}
+
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
@@ -520,9 +528,10 @@ label {
 /* header-white */
 .header-white {
 	border-bottom: 1px solid #e8e8e8;
+	background-color: #252464;
 }
 .header-white .header-text a {
-	color: #777777;
+	color: #e8e8e8;
 }
 .header-white .header-wrapper li::before {
 	background: #d4d4d4;
@@ -873,10 +882,17 @@ label {
 	font-weight: 800;
 	margin-bottom: 14px;
 }
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
 .our-service2-text p{margin-bottom:0;}
 /* 9. we-are-area */
 .we-are-area {
-	background-position: right 7% bottom;
+	background-position: right 7% center;
 	background-repeat: no-repeat;
 }
 .we-area-wrapper {
@@ -1081,7 +1097,7 @@ label {
 /* 12. clients-area */
 .clients-area{}
 .clients-wrapper {
-	border: 1px solid #e9e9e9;
+	/* border: 1px solid #e9e9e9;*/
 	padding: 38px 34px 34px 39px;
 	position:relative;
 }
@@ -1377,7 +1393,8 @@ font-size:13px;
 	border-bottom: 1px solid #e6e6e7;
 }
 .footer-white .footer-border {
-	border-bottom: 1px solid #e6e6e7;
+	border-bottom: 1px solid #252464;
+  border-top: 1px solid #252464;
 }
 .footer-white .copyright p {
 	color: #777777;
@@ -2607,7 +2624,7 @@ font-size:13px;
 	color: #d8d8d8;
 	margin-bottom: 0;
 }
-.bg-black{background:#222222;}
+.bg-black{background:#252464;}
 .bg-red{background:#cb1011;}
 /* meet-area */
 .meet-area{}
@@ -2616,6 +2633,7 @@ font-size:13px;
 	margin-left: 10px;
 	padding: 52px 70px 60px;
 }
+
 .meet-text{}
 .meet-text h1 {
 	font-size: 48px;
@@ -3626,7 +3644,23 @@ blockquote span::before {
 /* graph */
 #chartContainer{height: 300px; width: 100%}
 
+.et_pb_cta_0.et_pb_promo .et_pb_button_wrapper {
+    text-align: right;
+}
 
-
-
-
+.et_pb_button:after, .et_pb_button:before {
+    position: absolute;
+    margin-left: -1em;
+    opacity: 0;
+    text-shadow: none;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: none;
+    line-height: 1em;
+    text-transform: none;
+    content: "\35";
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+}

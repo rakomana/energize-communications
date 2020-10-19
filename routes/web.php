@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('contact', 'ContactController@getContactPage');
+Route::post('/submit-contact', 'ContactController@submitContactForm')->name('contact.submit');

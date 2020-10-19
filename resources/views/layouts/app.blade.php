@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Alochona - Consulting, Finance, Business HTML5 Template</title>
+		<title>Energize Communications</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<!--<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- CSS here -->
@@ -44,7 +44,7 @@
 										<i class="fas fa-phone"></i>
 									</div>
 									<div class="header-text">
-										<a href="#">+0123456789</a>
+										<a href="#">+xxx xxx xxxx</a>
 									</div>
 								</li>
 								<li>
@@ -52,7 +52,7 @@
 										<i class="fas fa-envelope"></i>
 									</div>
 									<div class="header-text">
-										<a href="#">support@gmail.com</a>
+										<a href="#">support@xxxxxxxx.com</a>
 									</div>
 								</li>
 							</ul>
@@ -77,13 +77,13 @@
 					<div class="row">
 						<div class="col-xl-3 col-lg-3">
 							<div class="logo">
-								<a href="{{url('/')}}"><img src="img/logo/logo-b.png" alt="" /></a>
+								<a href="{{url('/')}}"><img src="img/logo/energize.png" alt="" style="width:80%; padding:0px;"/></a>
 							</div>
 						</div>
 						<div class="col-xl-9 col-lg-9">
-							<div class="header-button d-none d-sm-none d-md-none d-lg-block">
+							<!--<div class="header-button d-none d-sm-none d-md-none d-lg-block">
 								<a class="btn btn-border" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
-							</div>
+							</div>-->
                            <div class="main-menu text-center">
 								<nav id="mobile-menu">
 									<ul>
@@ -194,137 +194,61 @@
 			</div>
 		</header>
 		<!-- header-end -->
-        
+
         @yield('content')
-        
-		<!-- footer-start -->
+
 		<footer>
-			<div class="footer-top-area footer-white gray-bg pt-80">
+			<div class="footer-top-area footer-white gray-bg pt-110">
 				<div class="container">
-					<div class="footer-border pb-45">
+					<div class="footer-border pb-45"><br>
 						<div class="row">
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
 							<div class="footer-wrapper mb-30">
 								<div class="footer-logo">
-									<a href="index.html"><img src="img/logo/logo-b.png" alt="" /></a>
+									<a href="{{url('/')}}"><img id="comp-kb980ox52imgimage" style="object-position:50% 50%;width:300px;height:65px;object-fit:contain" alt="ENERGIZE.PNG" data-type="image" itemprop="image" src="{{asset('img/energize.png')}}"></a>
 								</div>
 								<div class="footer-text">
-									<p>Nulla gravida orci a odio ullam vsturpis et commodo pharetra, est eros biben duelit nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismoe.</p>
+									<!--<p>JMM Financial t/a Smart Mortgages UK is an appointed representative of HL Partnership Limited, which is authorised and regulated by the Financial Conduct Authority.</p>-->
 								</div>
-								<ul class="footer-icon">
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-									<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-									<li><a href="#"><i class="fab fa-skype"></i></a></li>
-								</ul>
 							</div>
 						</div>
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
 							<div class="footer-wrapper mb-30">
 								<h3 class="footer-title">Quick Links</h3>
 								<ul class="footer-menu">
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Condition</a></li>
-									<li><a href="#">Support</a></li>
-									<li><a href="#">Consultation</a></li>
-									<li><a href="#">Team Member</a></li>
-									<li><a href="#">Our Services</a></li>
 									<li><a href="#">About Us</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Who we are</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+									<li><a href="#">Calculator</a></li>
 									<li><a href="#">Get a Quote</a></li>
-									<li><a href="#">Recent Post</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Resources</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-wrapper mb-30">
-								<h3 class="footer-title">Recent Post</h3>
-								<ul class="recent-menu">
-									<li>
-										<div class="recent-text">
-											<h6><a href="blog-details.html">Researchers have finally managed Cut the cord on robotic flies</a></h6>
-										</div>
-										<div class="recent-icon">
-											<i class="fas fa-calendar-alt"></i>
-										</div>
-										<div class="recent-info">
-											<span>05 May 2018</span>
-										</div>
-									</li>
-									<li>
-										<div class="recent-text">
-											<h6>
-												<a href="blog-details.html">Researchers have finally managed Cut the cord on robotic flies</a>
-											</h6>
-										</div>
-										<div class="recent-icon">
-											<i class="fas fa-calendar-alt"></i>
-										</div>
-										<div class="recent-info">
-											<span>05 May 2018</span>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
 							<div class="footer-wrapper mb-30">
 								<h3 class="footer-title">Subscribe</h3>
 								<div class="subscribe-text">
-									<p>Enter  your email and get latest updates and offers subscribe us</p>
+									<p>Enter  your email and get latest updates and offers<br>
+                    subscribe us</p>
 								</div>
-								<form id="footer-form" action="#">
-									<input placeholder="Your Email ..." type="text">
-									<button><i class="fas fa-long-arrow-alt-right"></i></button>
-								</form>
+                <form id="newsletter-form" class="newsletter_form" action="javascript:void(0)" method="post">
+								{{csrf_field()}}
+                            <input onfocusout="checkSubscriber()"; id="subscriber_email" name="subscriber_email" placeholder="Your Email ..." type="email" required="">
+
+                            <input value="SUBSCRIBE" addSubscriber(); id="" class="btn btn-black" style="padding:8px" type="submit">
+							<span id="statusSubscribe" style="display: none;"></span>
+                        </form>
 							</div>
 						</div>
 					</div>
-					</div>
-					<div class="footer-icon-area pt-40 pb-10">
-						<div class="row">
-							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-								<div class="footer-icon-wrapper mb-30">
-									<div class="footers-icon">
-										<a href="#"><i class="fas fa-phone"></i></a>
-									</div>
-									<div class="footer-icon-text">
-										<h4>call us</h4>
-										<span>+0123456789</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-								<div class="footer-icon-wrapper pl-30 mb-30">
-									<div class="footers-icon">
-										<a href="#"><i class="fas fa-envelope"></i></a>
-									</div>
-									<div class="footer-icon-text">
-										<h4>Email Us</h4>
-										<span>support@gmail.com</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-4 d-sm-none d-md-block">
-								<div class="footer-icon-wrapper pl-80 mb-30">
-									<div class="footers-icon">
-										<a href="#"><i class="fas fa-home"></i></a>
-									</div>
-									<div class="footer-icon-text">
-										<h4>Location</h4>
-										<span>42 Tailstoi, Town 01,New York</span>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 					<div class="footer-bottom-area pt-20 pb-20">
 						<div class="row">
 							<div class="col-xl-12">
 								<div class="copyright text-center">
-									<p>Copyright <i class="far fa-copyright"></i> 2018 BDevs.  All rights reserved</p>
+									<p>Copyright <i class="far fa-copyright"></i> 2020 Energize Communications</p>
 								</div>
 							</div>
 						</div>
@@ -336,24 +260,23 @@
 
 
 		<!-- JS here -->
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.meanmenu.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/waypoints.min.js"></script>
-		<script src="js/jquery.counterup.min.js"></script>
-		<script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/ajax-form.js"></script>
-        <script src="js/jquery.easypiechart.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="{{asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{asset('js/popper.min.js')}}"></script>
+        <script src="{{asset('js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
+        <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('js/isotope.pkgd.min.js')}}"></script>
+        <script src="{{asset('js/waypoints.min.js')}}"></script>
+		<script src="{{asset('js/jquery.counterup.min.js')}}"></script>
+		<script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
+        <script src="{{asset('js/slick.min.js')}}"></script>
+        <script src="{{asset('js/jquery.easypiechart.min.js')}}"></script>
+        <script src="{{asset('js/wow.min.js')}}"></script>
+        <script src="{{asset('js/jquery.scrollUp.min.js')}}"></script>
+        <script src="{{asset('js/imagesloaded.pkgd.min.js')}}"></script>
+        <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{asset('js/plugins.js')}}"></script>
+        <script src="{{asset('js/main.js')}}"></script>
     </body>
 </html>
