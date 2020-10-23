@@ -84,30 +84,28 @@
 							<!--<div class="header-button d-none d-sm-none d-md-none d-lg-block">
 								<a class="btn btn-border" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>-->
-                           <div class="main-menu text-center">
+                           <div class="main-menu" style="text-align: right;">
 								<nav id="mobile-menu">
 									<ul>
 										<li class="active">
 											<a href="{{url('/')}}">home</a>
 										</li>
 										<li>
-											<a href="services-1.html">Services</a>
+											<a href="services-1.html">Other Services</a>
 											<ul class="submenu">
 												<li>
-													<a href="services-1.html">Services Style 01</a>
+													<a href="services-1.html">VOIP</a>
 												</li>
 												<li>
-													<a href="services-2.html">Services Style 02</a>
+													<a href="services-2.html">Insurance</a>
 												</li>
 												<li>
-													<a href="services-3.html">Services Style 03</a>
+													<a href="services-3.html">SIP</a>
 												</li>
 												<li>
-													<a href="services-details1.html">Services Details 01</a>
+													<a href="services-details1.html">MS Teams</a>
 												</li>
-												<li>
-													<a href="services-details2.html">Services Details 02</a>
-												</li>
+												
 											</ul>
 										</li>
 										<li>
