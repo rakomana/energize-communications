@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="manifest" href="site.webmanifest">
+		<link rel="manifest" href="site.webmanifest">
 		<!--<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
         <!-- Place favicon.ico in the root directory -->
 
@@ -21,7 +21,11 @@
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous"></script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -91,98 +95,30 @@
 											<a href="{{url('/')}}">home</a>
 										</li>
 										<li>
-											<a href="services-1.html">Services</a>
+											<a href="#">Other Services</a>
 											<ul class="submenu">
 												<li>
-													<a href="services-1.html">Services Style 01</a>
+													<a href="#">VOIP</a>
 												</li>
 												<li>
-													<a href="services-2.html">Services Style 02</a>
+													<a href="#">Insurance</a>
 												</li>
 												<li>
-													<a href="services-3.html">Services Style 03</a>
+													<a href="#">SIP</a>
 												</li>
 												<li>
-													<a href="services-details1.html">Services Details 01</a>
-												</li>
-												<li>
-													<a href="services-details2.html">Services Details 02</a>
+													<a href="#">MS Teams</a>
 												</li>
 											</ul>
 										</li>
 										<li>
-											<a href="portofilo-2-column-gutter.html">Portfolio </a>
-											<ul class="submenu">
-												<li>
-													<a href="portofilo-2-column-gutter.html">Portfolio Gutter</a>
-												</li>
-												<li>
-													<a href="portofilo-2-column-no-gutter.html">Portfolio No Gutter</a>
-												</li>
-												<li>
-													<a href="portofilo-3-column-gutter.html">Portfolio 3 Column</a>
-												</li>
-												<li>
-													<a href="portofilo-2-column-masonry.html">Portfolio Masonry</a>
-												</li>
-												<li>
-													<a href="portfolio-details.html">Portfolio Details</a>
-												</li>
-											</ul>
+											<a href="#">Reminder Service </a>
 										</li>
 										<li>
-											<a href="cases-studies.html">Cases</a>
-											<ul class="submenu">
-												<li>
-													<a href="cases-studies.html"> Cases </a>
-												</li>
-												<li>
-													<a href="cases-studies-details.html">Cases Details</a>
-												</li>
-											</ul>
+											<a href="#">Our News</a>
 										</li>
 										<li>
-											<a href="blog.html">News</a>
-											<ul class="submenu">
-												<li>
-													<a href="blog.html">Blog 3 column</a>
-												</li>
-												<li>
-													<a href="blog-left-sidebar.html">blog left sidebar</a>
-												</li>
-												<li>
-													<a href="blog-right-sidebar.html">blog right sidebar</a>
-												</li>
-												<li>
-													<a href="blog-details.html">Blog Details</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="#">Pages</a>
-											<ul class="submenu">
-												<li>
-													<a href="about-1.html">about 01</a>
-												</li>
-												<li>
-													<a href="about-2.html">about 02</a>
-												</li>
-												<li>
-													<a href="team.html">Team 01</a>
-												</li>
-												<li>
-													<a href="team-2.html">Team 02</a>
-												</li>
-												<li>
-													<a href="pricing.html">Pricing</a>
-												</li>
-												<li>
-													<a href="contact.html">Contact</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="contact.html">contact</a>
+											<a href="#">contact</a>
 										</li>
 									</ul>
 								</nav>
@@ -230,16 +166,12 @@
 							<div class="footer-wrapper mb-30">
 								<h3 class="footer-title">Subscribe</h3>
 								<div class="subscribe-text">
-									<p>Enter  your email and get latest updates and offers<br>
-                    subscribe us</p>
+									<p>Enter  your email and get latest updates and offers subscribe us</p>
 								</div>
-                <form id="newsletter-form" class="newsletter_form" action="javascript:void(0)" method="post">
-								{{csrf_field()}}
-                            <input onfocusout="checkSubscriber()"; id="subscriber_email" name="subscriber_email" placeholder="Your Email ..." type="email" required="">
-
-                            <input value="SUBSCRIBE" addSubscriber(); id="" class="btn btn-black" style="padding:8px" type="submit">
-							<span id="statusSubscribe" style="display: none;"></span>
-                        </form>
+								<form id="footer-form" action="#">
+									<input placeholder="Your Email ..." type="text" name="email" id="email">
+									<button class="btn btn-success" onclick="myFunction()"><i class="fas fa-long-arrow-alt-right"></i></button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -277,6 +209,49 @@
         <script src="{{asset('js/imagesloaded.pkgd.min.js')}}"></script>
         <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
         <script src="{{asset('js/plugins.js')}}"></script>
-        <script src="{{asset('js/main.js')}}"></script>
+		<script src="{{asset('js/main.js')}}"></script>
+		
+		<script>
+			const App = new Vue({
+				el: "#custom",
+				data: {
+					loading: false,
+					form: {
+                    	email: null,
+					}
+				},
+	
+				methods: {
+					subscribe: function() {
+						this.loading = true
+						axios.post('/api/subscribe', this.form)
+						.then(response => {
+							this.loading = false
+							this.form.email = null
+							swal("Good!", "Welcome to our news letters", "success");
+						})
+						.catch(error => {
+							this.loading = false
+							this.form.email = null
+							swal("Oops!", "Already subscribed", "warning");
+						})
+					}
+				}
+			})
+		</script>
+		<script>
+			function myFunction() {
+				var email = $('#email').value();
+
+				$.ajax({
+					type: "POST",
+					url: "{{url('subscribe')}}/" + email;
+					success: function(data) {
+						$("#success").html('Inserted into database').delay(3000).fadeOut();
+					}
+				});
+				return false;
+			}
+		</script>
     </body>
 </html>

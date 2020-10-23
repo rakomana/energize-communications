@@ -14,7 +14,7 @@
 							<p data-animation="fadeInUp" data-delay=".8s">Bamcorper ligula eu tempor congue eros est euismod turpis, id tincidunt sapien risus a quam cenas fmentum consequat
 								monec fermentum ellentesque malesuada nullam.</p>
 							<div class="slider-button">
-								<a class="btn btn-black" href="#" data-animation="fadeInLeft" data-delay="1.2s">read more
+								<a class="btn btn-black" href="#" data-animation="fadeInLeft" data-delay="1.2s">Request a callback
 									<i class="fas fa-long-arrow-alt-right"></i>
 								</a>
 							</div>
@@ -318,7 +318,7 @@
 					</div>
 				</div>
 
-				<div class="col-xl-6 col-lg-6">
+				<div class="col-xl-6 col-lg-6" id="implement">
 					<div class="request-wrapper requests-wrapper bg-black">
 						<div class="request-text">
 							<h1>CONTACT US</h1>
@@ -330,20 +330,19 @@
 						        <div class="row">
 
 						        </div>
-						        <form method="post" action="{{ route('contact.submit') }}" role="form">
-						            {{ csrf_field() }}
+						        <form @submit.prevent="sendMessage">
 						            <div class="controls">
 						                <div class="row">
 						                    <div class="col-md-6">
 						                        <div class="form-group">
 						                            <label for="form_name">Name *</label>
-						                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name">
+						                            <input id="form_name" type="text" v-model="form.name" class="form-control" placeholder="Please enter your name" required>
 						                        </div>
 						                    </div>
 						                    <div class="col-md-6">
 						                        <div class="form-group">
 						                            <label for="form_email">Email *</label>
-						                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email">
+						                            <input id="form_email" type="email" v-model="form.email" class="form-control" placeholder="Please enter your email" required>
 						                        </div>
 						                    </div>
 						                </div>
@@ -351,7 +350,7 @@
 						                    <div class="col-md-12">
 						                        <div class="form-group">
 						                            <label for="form_message">Message *</label>
-						                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4"></textarea>
+						                            <textarea id="form_message" v-model="form.message" class="form-control" placeholder="Message for me *" rows="4" required></textarea>
 						                        </div>
 						                    </div>
 						                    <div class="col-md-12">
@@ -368,7 +367,16 @@
 						                        </div>
 						                    </div>
 						                    <div class="col-md-12">
-						                        <input type="submit" class="btn btn-success btn-send" value="Send message">
+												<button type="submit" class="btn btn-success btn-send">Send message
+													<span v-if="loading">
+														<i class="fa fa-spinner fa-spin"></i>
+													</span>
+													<span v-else>
+													<i class="fas fa-long-arrow-alt-right"></i>
+													</span>
+												</button>
+													
+												
 						                    </div>
 						                </div>
 						            </div>
@@ -435,7 +443,40 @@
 			</div>
 		</div>
 		<!-- brand-area-end -->
-
+		<script>
+			const App = new Vue({
+				el: "#implement",
+				data: {
+					loading: false,
+					error: null,
+					form: {
+						message: null,
+						email: null,
+						name: null
+					}
+				},
+				methods: {
+					sendMessage: function() {
+						this.loading = true
+						axios.post('/api/contact', this.form)
+						.then(response => {
+							this.loading = false
+							this.form.message = null
+							this.form.email = null
+							this.form.name = null
+							swal("Well done!", "Message submitted succesfully", "success");
+						})
+						.catch(error => {
+							this.loading = false
+							this.form.message = null
+							this.form.email = null
+							this.form.name = null
+							swal("Oops!", "Something went wrong", "warning");
+						})
+					}
+				}
+			})
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

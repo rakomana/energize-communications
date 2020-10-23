@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('contact', 'ContactController@getContactPage');
-Route::post('/submit-contact', 'ContactController@submitContactForm')->name('contact.submit');
+Route::post('subscribe/{email}', [SubscriptionController::class, 'store']);
