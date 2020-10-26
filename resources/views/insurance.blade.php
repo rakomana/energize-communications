@@ -166,39 +166,6 @@ p {
 	100% {margin-left: -300%;}
 }
 
-@media (max-width:600px){
-    .slider-portada{
-        width: 100%;
-        height: 400px;
-    }
-}
-@media (min-width:600px){
- .slider-portada{
-     width: 100%;
-     height: 400px;
- }   
-}
-
-@media(min-width:768px){
-.slider-portada {
-width: 100%;
-height: 420px;
-    }
-}
-
-@media (min-width:992px){
-    .slider-portada{
-        width: 100%;
-        height: 400px;
-    }
-}
-
-@media (min-width:1200px){
-    .slider-portada{
-        width: 100%;
-        height: 600px;
-    }
-
     @media only screen and (max-width:800px) {
   /* For tablets: */
   .main {
