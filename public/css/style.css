@@ -37,7 +37,31 @@
 29. contact
 */
 
+@media only screen and (max-device-width: 480px) {
+	div#wrapper {
+		width: 400px;
+	}
 
+	div#header {
+		background-image: url(media-queries-phone.jpg);
+		height: 93px;
+		position: relative;
+	}
+
+	div#header h1 {
+		font-size: 140%;
+	}
+
+	#content {
+		float: none;
+		width: 100%;
+	}
+
+	#navigation {
+		float:none;
+		width: auto;
+	}
+}
 
 /* 1. Theme default css */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open+Sans:400,600,700,800');
@@ -412,6 +436,10 @@ label {
     z-index: 9;
 }
 
+.active {
+	color:#002e5b;
+}
+
 /* Start */
 .news_hor {
 	font-family: Barlow;
@@ -488,7 +516,7 @@ label {
     color: #ac4c7c;
     text-align: center;
     font-size: 45px;
-    text-shadow: -3px -3px 5px  #252464 ;
+    text-shadow: -3px -3px 11px  #252464 ;
     letter-spacing: 4px;
 }
 

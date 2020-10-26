@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>Energize Communications</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Leeuw Maluleka">
+		
 
 		<link rel="manifest" href="site.webmanifest">
 		<!--<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
@@ -20,7 +21,8 @@
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="small-device.css" />
 		<link rel="stylesheet" href="css/responsive.css">
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -88,14 +90,14 @@
 							<!--<div class="header-button d-none d-sm-none d-md-none d-lg-block">
 								<a class="btn btn-border" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>-->
-                           <div class="main-menu" style="text-align: right;">
-								<nav id="mobile-menu">
-									<ul>
+                           <div class="main-menu active" id="topheader" style="text-align: right;">
+								<nav id="mobile-menu" class="navbar navbar-default main-nav">
+									<ul class="main-nav__list">
 										<li class="active">
 											<a href="{{url('/')}}">home</a>
 										</li>
 										<li>
-											<a href="#">Other Services</a>
+											<a href="#" >Other Services</a>
 											<ul class="submenu">
 												<li>
 													<a href="{{url('/voip')}}">VOIP</a>
@@ -253,5 +255,21 @@
 				return false;
 			}
 		</script>
+		<script>
+			$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+			</script>
+			<script>
+			$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+</script>
     </body>
 </html>

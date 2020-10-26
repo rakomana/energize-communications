@@ -28,7 +28,7 @@
 				<div class="slider-wrapper single-slider height-800 d-flex align-items-center" style="background-image:url(img/slider/banner03.png)">
 					<div class="container">
 						<div class="slider-content slide-text-black" style="text-align:right; color:white;">
-							<h1 data-animation="fadeInUp" data-delay=".4s" style="color:#ac4c7c;">Don't want the hassle of sorting
+							<h1 data-animation="fadeInUp" data-delay=".4s" style="color:white;">Don't want the hassle of sorting
 							  <br> out your business mobiles?
 							<br>We'll take care of it quickly
 						<br>and save you money</h1>
