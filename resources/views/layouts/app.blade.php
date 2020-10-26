@@ -90,11 +90,11 @@
 							<!--<div class="header-button d-none d-sm-none d-md-none d-lg-block">
 								<a class="btn btn-border" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>-->
-                           <div class="main-menu active" id="topheader" style="text-align: right;">
-								<nav id="mobile-menu" class="navbar navbar-default main-nav">
-									<ul class="main-nav__list">
-										<li class="active">
-											<a href="{{url('/')}}">home</a>
+                           <div class="main-menu" id="topheader" style="text-align: right;">
+								<nav id="mobile-menu" class="navbar navbar-default">
+									<ul>
+										<li>
+											<a href="{{url('/')}}" style="color:#252464">home</a>
 										</li>
 										<li>
 											<a href="#" >Other Services</a>
@@ -263,13 +263,12 @@
 });
 });
 			</script>
-			<script>
-			$(document).ready(function(){
-  $('ul li a').click(function(){
-    $('li a').removeClass("active");
-    $(this).addClass("active");
-});
-});
-</script>
+
+			<script type="text/javascript">
+			$("a").click(function){
+				$("a").css("color","");
+				$(this).css("color","#252464");
+				});
+			</script>
     </body>
 </html>
