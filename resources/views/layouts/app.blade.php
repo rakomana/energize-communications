@@ -168,9 +168,10 @@
 								<div class="subscribe-text">
 									<p>Enter  your email and get latest updates and offers subscribe us</p>
 								</div>
-								<form id="footer-form" action="#">
+								<form id="footer-form" method="POST" action="{{url('subscribe')}}">
+									@csrf
 									<input placeholder="Your Email ..." type="text" name="email" id="email">
-									<button class="btn btn-success" onclick="myFunction()"><i class="fas fa-long-arrow-alt-right"></i></button>
+									<button class="btn btn-success"><i class="fas fa-long-arrow-alt-right"></i></button>
 								</form>
 							</div>
 						</div>
@@ -210,48 +211,5 @@
         <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
         <script src="{{asset('js/plugins.js')}}"></script>
 		<script src="{{asset('js/main.js')}}"></script>
-		
-		<script>
-			const App = new Vue({
-				el: "#custom",
-				data: {
-					loading: false,
-					form: {
-                    	email: null,
-					}
-				},
-	
-				methods: {
-					subscribe: function() {
-						this.loading = true
-						axios.post('/api/subscribe', this.form)
-						.then(response => {
-							this.loading = false
-							this.form.email = null
-							swal("Good!", "Welcome to our news letters", "success");
-						})
-						.catch(error => {
-							this.loading = false
-							this.form.email = null
-							swal("Oops!", "Already subscribed", "warning");
-						})
-					}
-				}
-			})
-		</script>
-		<script>
-			function myFunction() {
-				var email = $('#email').value();
-
-				$.ajax({
-					type: "POST",
-					url: "{{url('subscribe')}}/" + email;
-					success: function(data) {
-						$("#success").html('Inserted into database').delay(3000).fadeOut();
-					}
-				});
-				return false;
-			}
-		</script>
     </body>
 </html>

@@ -27,10 +27,12 @@ class SubscriptionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(string $email)
+    public function store(SubscriptionStoreRequest $request)
     {
         $subscribe = new $this->subscribe();
-        $subscribe->email = $email;
-        $subscribe->save();    
+        $subscribe->email = $request->email;
+        $subscribe->save();
+        
+        return redirect()->back();
     }
 }

@@ -21,4 +21,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('subscribe/{email}', [SubscriptionController::class, 'store']);
+Route::post('subscribe', [SubscriptionController::class, 'store']);
