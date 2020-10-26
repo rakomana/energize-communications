@@ -161,94 +161,129 @@ i {
     <div class="contentform">
     	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
 
-
     	<div class="leftcontact">
 			      <div class="form-group">
-			        <p>Surname<span>*</span></p>
+			        <p>First Name<span>*</span></p>
 			        <span class="icon-case"><i class="fa fa-male"></i></span>
-				        <input type="text" name="nom" id="nom" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
-                <div class="validation"></div>
+              <input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" required/>
+              
+              @error('first_name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
        </div> 
 
             <div class="form-group">
-            <p>Name <span>*</span></p>
+            <p>Last Name <span></span></p>
             <span class="icon-case"><i class="fa fa-user"></i></span>
-				<input type="text" name="prenom" id="prenom" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné."/>
-                <div class="validation"></div>
+            <input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" required/>
+            
+            @error('last_name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>
 
 			<div class="form-group">
-			<p>E-mail <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-envelope"></i></span>
-                <input type="email" name="email" id="email" data-rule="email" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
-                <div class="validation"></div>
+			    <p>E-mail <span>*</span></p>	
+			    <span class="icon-case"><i class="fa fa-envelope"></i></span>
+          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" required/>
+
+          @error('email')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>	
 
 			<div class="form-group">
-			<p>Company <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-home"></i></span>
-				<input type="text" name="society" id="society" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
-                <div class="validation"></div>
+			  <p>Mobile Number<span>*</span></p>
+			  <span class="icon-case"><i class="fa fa-home"></i></span>
+        <input type="text" name="mobile_number" class="form-control @error('mobile_number') is-invalid @enderror" required/>
+        
+        @error('mobile_number')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>
 
 			<div class="form-group">
-			<p>Company Address <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-location-arrow"></i></span>
-				<input type="text" name="adresse" id="adresse" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné."/>
-                <div class="validation"></div>
-			</div>
-
-			<div class="form-group">
-			<p>Postcode <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-map-marker"></i></span>
-				<input type="text" name="postal" id="postal" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné."/>
-                <div class="validation"></div>
+			  <p>Est Contract Due Date <span>*</span></p>
+			  <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+        <input type="text" name="est_contract_due_date" class="form-control @error('est_contract_due_date') is-invalid @enderror" required/>
+        
+        @error('est_contract_due_date')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>	
-
 	</div>
 
-	<div class="rightcontact">	
-
+	  <div class="rightcontact">	
+      <div class="form-group">
+			  <p>Company <span></span></p>
+			  <span class="icon-case"><i class="fa fa-shopping-bag"></i></span>
+        <input type="text" name="company" class="form-control @error('company') is-invalid @enderror"/>
+        
+        @error('company')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+      </div>
+      
 			<div class="form-group">
-			<p>City <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-location-arrow"></i></span>
-				<input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
-                <div class="validation"></div>
+			  <p>Current Spend</p>
+			  <span class="icon-case"><i class="fa fa-pound-sign"></i></span>
+        <input type="text" name="current_spend" class="form-control @error('current_spend') is-invalid @enderror"/>
+        
+        @error('current_spend')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>	
 
 			<div class="form-group">
-			<p>Phone number <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-phone"></i></span>
-				<input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
-                <div class="validation"></div>
+			  <p>No Of Phones</p>	
+			  <span class="icon-case"><i class="fa fa-phone"></i></span>
+        <input type="number" min="1" name="no_of_phones" class="form-control @error('no_of_phones') is-invalid @enderror"/>
+        
+        @error('no_of_phones')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>
 
 			<div class="form-group">
-			<p>Current Spend <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-pound-sign"></i></span>
-                <input type="text" name="fonction" id="fonction" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
-                <div class="validation"></div>
+			  <p>Current Network</p>
+			  <span class="icon-case"><i class="fa fa-signal"></i></span>
+        <input type="text" name="current_network" class="form-control @error('current_network') is-invalid @enderror"/>
+
+        @error('current_network')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>
 
 			<div class="form-group">
-			<p>No. of Phones <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-phone"></i></span>
-                <input type="number" name="sujet" id="sujet" data-rule="required"/>
-                <div class="validation"></div>
+			  <p>Phone Type <span>*</span></p>	
+			  <span class="icon-case"><i class="fa fa-phone"></i></span>
+        <input type="text" name="phone_type" class="form-control @error('phone_type') is-invalid @enderror"/>
+
+        @error('phone_type')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
 			</div>
-		
-			<div class="form-group">
-			<p>Current Network <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-signal"></i></span>
-      <input type="number" name="sujet" id="sujet" data-rule="required"/>
-                <div class="validation"></div>
-      </div>
-      <div class="form-group">
-			<p>Phone Type <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-phone"></i></span>
-                <input type="text" name="sujet" id="sujet" data-rule="required"/>
-                <div class="validation"></div>
-			</div>
+
   </div>
   </div><br><br>
   <br>
@@ -266,7 +301,8 @@ i {
                             </div>
                         </div>
                     </div> 
-<form_button type="submit" class="bouton-contact col-md-12 btn btn-success btn-send">Set Reminder</form_button>
+
+<button type="submit" class="bouton-contact col-md-12 btn btn-success btn-send">Set Reminder</button>
 	
 </form>	
 {!! NoCaptcha::renderJs() !!}
