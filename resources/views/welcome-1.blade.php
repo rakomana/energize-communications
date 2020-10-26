@@ -9,10 +9,8 @@
 				<div class="slider-wrapper single-slider height-800 d-flex align-items-center" style="background-image:url(img/slider/original.jpg)">
 					<div class="container">
 						<div class="slider-content slide-text-black">
-							<h1 data-animation="fadeInUp" data-delay=".4s">Good advise change
-							 Your <br> business growth</h1>
-							<p data-animation="fadeInUp" data-delay=".8s">Bamcorper ligula eu tempor congue eros est euismod turpis, id tincidunt sapien risus a quam cenas fmentum consequat
-								monec fermentum ellentesque malesuada nullam.</p>
+							<h1 data-animation="fadeInUp" data-delay=".4s">Save up to 50% off your<br>
+							business mobile costs</h1>
 							<div class="slider-button">
 								<a class="btn btn-black" href="#" data-animation="fadeInLeft" data-delay="1.2s">Request a callback
 									<i class="fas fa-long-arrow-alt-right"></i>
@@ -30,11 +28,13 @@
 				<div class="slider-wrapper single-slider height-800 d-flex align-items-center" style="background-image:url(img/slider/banner03.png)">
 					<div class="container">
 						<div class="slider-content slide-text-black" style="text-align:right; color:white;">
-							<h1 data-animation="fadeInUp" data-delay=".4s" style="color:white;">Good advise change
-							 Your <br> business growth</h1>
+							<h1 data-animation="fadeInUp" data-delay=".4s" style="color:white;">Don't want the hassle of sorting
+							  <br> out your business mobiles?
+							<br>We'll take care of it quickly
+						<br>and save you money</h1>
 
 							<div class="slider-button">
-								<a class="btn btn-black" href="#" data-animation="fadeInLeft" data-delay="1.2s">read more
+								<a class="btn btn-black" href="#" data-animation="fadeInLeft" data-delay="1.2s">Request a callback
 									<i class="fas fa-long-arrow-alt-right"></i>
 								</a>
 							</div>
@@ -76,7 +76,7 @@
 		<div class="we-are-area pt-105 pb-80" style="background-image:url(img/bg/dialing.jpeg)">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-8" style="text-align: center;">
+					<div class="col-xl-8" style="text-align: center; max-width:59.666667%;">
 						<div class="we-area-wrapper">
 							<div class="we-area-text">
 								<h1 style="color:#252464; text-align: center;"><strong> ABOUT ENERGIZE <a style="color:#ac4c7c">COMMUNICATIONS</a></strong> </h1>

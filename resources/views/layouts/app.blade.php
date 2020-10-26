@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>Energize Communications</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Leeuw Maluleka">
+		
 
 		<link rel="manifest" href="site.webmanifest">
 		<!--<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
@@ -20,7 +21,8 @@
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="small-device.css" />
 		<link rel="stylesheet" href="css/responsive.css">
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -88,37 +90,37 @@
 							<!--<div class="header-button d-none d-sm-none d-md-none d-lg-block">
 								<a class="btn btn-border" href="#">get a quote <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>-->
-                           <div class="main-menu text-center">
-								<nav id="mobile-menu">
+                           <div class="main-menu" id="topheader" style="text-align: right;">
+								<nav id="mobile-menu" class="navbar navbar-default">
 									<ul>
-										<li class="active">
-											<a href="{{url('/')}}">home</a>
+										<li>
+											<a href="{{url('/')}}" style="color:#252464">home</a>
 										</li>
 										<li>
-											<a href="#">Other Services</a>
+											<a href="#" >Other Services</a>
 											<ul class="submenu">
 												<li>
-													<a href="#">VOIP</a>
+													<a href="{{url('/voip')}}">VOIP</a>
 												</li>
 												<li>
-													<a href="#">Insurance</a>
+													<a href="{{url('/insurance')}}">Insurance</a>
 												</li>
 												<li>
-													<a href="#">SIP</a>
+													<a href="{{url('/sip')}}">SIP</a>
 												</li>
 												<li>
-													<a href="#">MS Teams</a>
+													<a href="{{url('/teams')}}">MS Teams</a>
 												</li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">Reminder Service </a>
+											<a href="{{url('/reminder')}}">Reminder Service </a>
 										</li>
 										<li>
-											<a href="#">Our News</a>
+											<a href="{{url('/news')}}">Our News</a>
 										</li>
 										<li>
-											<a href="#">contact</a>
+											<a href="{{url('/contact')}}">contact</a>
 										</li>
 									</ul>
 								</nav>
@@ -152,13 +154,13 @@
 							<div class="footer-wrapper mb-30">
 								<h3 class="footer-title">Quick Links</h3>
 								<ul class="footer-menu">
-									<li><a href="#">About Us</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-									<li><a href="#">Calculator</a></li>
-									<li><a href="#">Get a Quote</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-									<li><a href="#">Resources</a></li>
+									<li><a href="#">VOIP</a></li>
+                                    <li><a href="#">INSURANCE</a></li>
+									<li><a href="#">SIP</a></li>
+									<li><a href="#">MS TEAMS</a></li>
+									<li><a href="#">REMINDER SERVICE</a></li>
+                                    <li><a href="#">OUR NEWS</a></li>
+									<li><a href="#">CONTACT</a></li>
 								</ul>
 							</div>
 						</div>
@@ -211,5 +213,34 @@
         <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
         <script src="{{asset('js/plugins.js')}}"></script>
 		<script src="{{asset('js/main.js')}}"></script>
+		<script>
+			function myFunction() {
+				var email = $('#email').value();
+
+				$.ajax({
+					type: "POST",
+					url: "{{url('subscribe')}}/" + email;
+					success: function(data) {
+						$("#success").html('Inserted into database').delay(3000).fadeOut();
+					}
+				});
+				return false;
+			}
+		</script>
+		<script>
+			$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+			</script>
+
+			<script type="text/javascript">
+			$("a").click(function){
+				$("a").css("color","");
+				$(this).css("color","#252464");
+				});
+			</script>
     </body>
 </html>
