@@ -165,7 +165,7 @@ i {
 			      <div class="form-group">
 			        <p>First Name<span>*</span></p>
 			        <span class="icon-case"><i class="fa fa-male"></i></span>
-              <input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" required/>
+              <input type="text" name="first_name" class="@error('first_name') is-invalid @enderror" required/>
               
               @error('first_name')
                 <span class="invalid-feedback" role="alert">
@@ -177,7 +177,7 @@ i {
             <div class="form-group">
             <p>Last Name <span></span></p>
             <span class="icon-case"><i class="fa fa-user"></i></span>
-            <input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" required/>
+            <input type="text" name="last_name" class="@error('last_name') is-invalid @enderror" required/>
             
             @error('last_name')
                 <span class="invalid-feedback" role="alert">
@@ -189,7 +189,7 @@ i {
 			<div class="form-group">
 			    <p>E-mail <span>*</span></p>	
 			    <span class="icon-case"><i class="fa fa-envelope"></i></span>
-          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" required/>
+          <input type="email" name="email" class="@error('email') is-invalid @enderror" required/>
 
           @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -201,7 +201,7 @@ i {
 			<div class="form-group">
 			  <p>Mobile Number<span>*</span></p>
 			  <span class="icon-case"><i class="fa fa-home"></i></span>
-        <input type="text" name="mobile_number" class="form-control @error('mobile_number') is-invalid @enderror" required/>
+        <input type="text" name="mobile_number" class="@error('mobile_number') is-invalid @enderror" required/>
         
         @error('mobile_number')
                 <span class="invalid-feedback" role="alert">
@@ -213,7 +213,7 @@ i {
 			<div class="form-group">
 			  <p>Est Contract Due Date <span>*</span></p>
 			  <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
-        <input type="text" name="est_contract_due_date" class="form-control @error('est_contract_due_date') is-invalid @enderror" required/>
+        <input type="text" name="est_contract_due_date" class="@error('est_contract_due_date') is-invalid @enderror" required/>
         
         @error('est_contract_due_date')
                 <span class="invalid-feedback" role="alert">
@@ -227,7 +227,7 @@ i {
       <div class="form-group">
 			  <p>Company <span></span></p>
 			  <span class="icon-case"><i class="fa fa-shopping-bag"></i></span>
-        <input type="text" name="company" class="form-control @error('company') is-invalid @enderror"/>
+        <input type="text" name="company" class="@error('company') is-invalid @enderror"/>
         
         @error('company')
                 <span class="invalid-feedback" role="alert">
@@ -239,7 +239,7 @@ i {
 			<div class="form-group">
 			  <p>Current Spend</p>
 			  <span class="icon-case"><i class="fa fa-pound-sign"></i></span>
-        <input type="text" name="current_spend" class="form-control @error('current_spend') is-invalid @enderror"/>
+        <input type="text" name="current_spend" class="@error('current_spend') is-invalid @enderror"/>
         
         @error('current_spend')
                 <span class="invalid-feedback" role="alert">
@@ -251,7 +251,7 @@ i {
 			<div class="form-group">
 			  <p>No Of Phones</p>	
 			  <span class="icon-case"><i class="fa fa-phone"></i></span>
-        <input type="number" min="1" name="no_of_phones" class="form-control @error('no_of_phones') is-invalid @enderror"/>
+        <input type="number" min="1" name="no_of_phones" class="@error('no_of_phones') is-invalid @enderror"/>
         
         @error('no_of_phones')
                 <span class="invalid-feedback" role="alert">
@@ -263,7 +263,7 @@ i {
 			<div class="form-group">
 			  <p>Current Network</p>
 			  <span class="icon-case"><i class="fa fa-signal"></i></span>
-        <input type="text" name="current_network" class="form-control @error('current_network') is-invalid @enderror"/>
+        <input type="text" name="current_network" class="@error('current_network') is-invalid @enderror"/>
 
         @error('current_network')
                 <span class="invalid-feedback" role="alert">
@@ -275,7 +275,7 @@ i {
 			<div class="form-group">
 			  <p>Phone Type <span>*</span></p>	
 			  <span class="icon-case"><i class="fa fa-phone"></i></span>
-        <input type="text" name="phone_type" class="form-control @error('phone_type') is-invalid @enderror"/>
+        <input type="text" name="phone_type" class="@error('phone_type') is-invalid @enderror"/>
 
         @error('phone_type')
                 <span class="invalid-feedback" role="alert">
