@@ -22,3 +22,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('subscribe/{email}', [SubscriptionController::class, 'store']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
