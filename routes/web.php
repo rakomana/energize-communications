@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\ReminderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +48,6 @@ Route::get('/teams', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('subscribe/{email}', [SubscriptionController::class, 'store']);
+Route::post('subscribe', [SubscriptionController::class, 'store']);
+Route::post('reminder', [ReminderController::class, 'store']);
 

@@ -120,7 +120,7 @@
 											<a href="{{url('/news')}}">Our News</a>
 										</li>
 										<li>
-											<a href="{{url('/contact')}}">contact</a>
+											<a href="{{url('/contact')}}">Contact Us</a>
 										</li>
 									</ul>
 								</nav>
@@ -213,20 +213,6 @@
         <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
         <script src="{{asset('js/plugins.js')}}"></script>
 		<script src="{{asset('js/main.js')}}"></script>
-		<script>
-			function myFunction() {
-				var email = $('#email').value();
-
-				$.ajax({
-					type: "POST",
-					url: "{{url('subscribe')}}/" + email;
-					success: function(data) {
-						$("#success").html('Inserted into database').delay(3000).fadeOut();
-					}
-				});
-				return false;
-			}
-		</script>
 		<script>
 			$(document).ready(function(){
   $('ul li a').click(function(){

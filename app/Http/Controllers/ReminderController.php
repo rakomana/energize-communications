@@ -43,9 +43,6 @@ class ReminderController extends Controller
 
         $this->db->commit();
 
-        return response()->json([
-            'message' => 'Reminder set succusfully',
-            'status' => 201
-        ]);
+        return view('thank-you-reminder');
     }
 }

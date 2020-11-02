@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Subscription;
 use Illuminate\Http\Request;
 use App\Http\Requests\SubscriptionStoreRequest;
+use Illuminate\Database\ConnectionInterface as DB;
 
 class SubscriptionController extends Controller
 {
     private $email;
+    private $db;
 
     /**
      * Inject models into the constructor
@@ -16,9 +18,10 @@ class SubscriptionController extends Controller
      * @param Subscription $subscribe
      * 
      */
-    public function __construct(Subscription $subscribe)
+    public function __construct(Subscription $subscribe, DB $db)
     {
         $this->subscribe = $subscribe;
+        $this->db = $db;
     }
     
     /**
@@ -29,10 +32,14 @@ class SubscriptionController extends Controller
      */
     public function store(SubscriptionStoreRequest $request)
     {
+        $this->db->beginTransaction();
+
         $subscribe = new $this->subscribe();
         $subscribe->email = $request->email;
         $subscribe->save();
         
-        return redirect()->back();
+        $this->db->commit();
+
+        return view('thank-you-subscribe');
     }
 }

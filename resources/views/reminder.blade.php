@@ -154,7 +154,7 @@ i {
 }
 </style>
 
-<form method="post" action="#" role="form">
+<form method="post" action="{{url('reminder')}}" role="form">
 {{ csrf_field() }}
 	    <h1>Please fill out all information, so that we may better server you!</h1>
 	    
@@ -213,7 +213,7 @@ i {
 			<div class="form-group">
 			  <p>Est Contract Due Date <span>*</span></p>
 			  <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
-        <input type="text" name="est_contract_due_date" class="@error('est_contract_due_date') is-invalid @enderror" required/>
+        <input type="date" name="est_contract_due_date" class="@error('est_contract_due_date') is-invalid @enderror" required/>
         
         @error('est_contract_due_date')
                 <span class="invalid-feedback" role="alert">

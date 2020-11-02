@@ -439,20 +439,19 @@ form {
 			</g>
 	</svg>
 	
-	
 	<!-- // FORM
   -------------------------------------------------------------
   ------------------------------------------------------------>
 	<br><br><br>
-	<form>
+	<div id="implement">
+	<form @submit.prevent="sendMessage">
     <h2 class="font-weight-bold">Contact Us</h2>
-
 			<!-- Name -->
 			<div class="form-group position-relative">
 				<label for="formName" class="d-block">
 					<i class="icon" data-feather="user"></i>
 				</label>
-				<input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name *" required>
+				<input type="text" v-model="form.name" class="form-control form-control-lg thick" placeholder="Name *" required>
 			</div>
 
 			<!-- E-mail -->
@@ -460,12 +459,12 @@ form {
 				<label for="formEmail" class="d-block">
 					<i class="icon" data-feather="mail"></i>
 				</label>
-				<input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="Email *" required>
+				<input type="email" v-model="form.email" class="form-control form-control-lg thick" placeholder="Email *" required>
 			</div>
 
 			<!-- Message -->
 			<div class="form-group message">
-				<textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message *" required></textarea>
+				<textarea v-model="form.message" class="form-control form-control-lg" rows="7" placeholder="Message *" required></textarea>
             </div>
             <div class="col-md-12">
                         <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
@@ -483,12 +482,55 @@ form {
 		
 			<!-- Submit btn -->
 			<div class="text-center">
-				<button type="submit" class="btn btn-primary" tabIndex="-1" style="color:white;">Send message</button>
-            </div>
-            
+				<button type="submit" class="btn btn-primary" tabIndex="-1" style="color:white;">
+					Send message
+					<span v-if="loading">
+						<i class="fa fa-spinner fa-spin"></i>
+					</span>
+					<span v-else>
+					<i class="fas fa-long-arrow-alt-right"></i>
+					</span>
+				</button>
+            </div>   
 	</form>
+</div> 
 	
 </div>
-    {!! NoCaptcha::renderJs() !!}
+	{!! NoCaptcha::renderJs() !!}
+	<!-- brand-area-end -->
+	<script>
+		const App = new Vue({
+			el: "#implement",
+			data: {
+				loading: false,
+				error: null,
+				form: {
+					message: null,
+					email: null,
+					name: null
+				}
+			},
+			methods: {
+				sendMessage: function() {
+					this.loading = true
+					axios.post('/api/contact', this.form)
+					.then(response => {
+						this.loading = false
+						this.form.message = null
+						this.form.email = null
+						this.form.name = null
+						swal("Well done!", "Message submitted succesfully", "success");
+					})
+					.catch(error => {
+						this.loading = false
+						this.form.message = null
+						this.form.email = null
+						this.form.name = null
+						swal("Oops!", "Something went wrong", "warning");
+					})
+				}
+			}
+		})
+	</script>
 
 @endsection

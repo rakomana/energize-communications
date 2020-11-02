@@ -15,7 +15,6 @@ use App\Http\Controllers\ContactController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('reminder', [ReminderController::class, 'store']);
 Route::post('/contact', [ContactController::class, 'store']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
