@@ -51,3 +51,7 @@ Auth::routes();
 Route::post('subscribe', [SubscriptionController::class, 'store']);
 Route::post('reminder', [ReminderController::class, 'store']);
 
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
